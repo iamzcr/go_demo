@@ -1,0 +1,20 @@
+{{ define "frontend/movie" }}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<form action="/postMovie" method="post">
+    <input type="text" name="title">
+    <input type="text" name="rating">
+    <input type="text" name="year">
+    <input type="submit" value="add">
+</form>
+
+</body>
+</html>
+
+{{ end }}

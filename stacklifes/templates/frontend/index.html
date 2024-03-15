@@ -1,0 +1,28 @@
+{{ define "frontend/index" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<!--加载公共模板，注意要带.号-->
+{{ template "common/header" .}}
+
+test
+{{ .message }}
+<br>
+<!--
+模板引擎默认使用的是 Go 的文本模板（text/template）或 HTML 模板（html/template）。这些模板引擎在默认情况下无法直接访问结构体的字段，即使添加了标签（tags）也不会生效。
+要在模板中访问结构体的字段，您需要在模板渲染时将结构体作为模板的数据传递，并使用模板语法来访问结构体的字段。
+可以用github.com/flosch/pongo2/v4这个模板引擎
+-->
+
+
+{{.data.Title}}
+<br>
+{{UnixToTime .time}}
+</body>
+
+{{ end }}

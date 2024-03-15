@@ -1,0 +1,19 @@
+{{ define "frontend/query" }}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+<!--加载公共模板，注意要带.号-->
+{{ template "common/header" .}}
+
+{{ .name }}
+<br>
+{{ .pwd }}
+
+</body>
+
+{{ end }}
